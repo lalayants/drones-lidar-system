@@ -8,7 +8,6 @@ project(local_map_builder)
 find_package(octomap REQUIRED)
 
 find_package(catkin REQUIRED COMPONENTS 
-  3d_navigation 
   roscpp
   rospy
   std_msgs
