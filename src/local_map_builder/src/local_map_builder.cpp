@@ -1,4 +1,4 @@
-#include "include/local_map_builder.h"
+#include "../include/local_map_builder.h"
 
 LocalMapBuilder::LocalMapBuilder(ros::NodeHandle & _node_handler){
     ROS_INFO("LocalMapBuilder creation started");
