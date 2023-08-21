@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>local_map_builder</name>
+  <version>0.0.1</version>
+  <description>This package will create local octomap based on lidar data(I hope)</description>
+
+  <maintainer email="texnoman@itmo.ru">Vladislav Antipov</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>pr2_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>control_msgs</run_depend>
+  <run_depend>diagnostic_msgs</run_depend> 
+  <run_depend>geometry_msgs</run_depend> 
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+
+  <export>
+  </export>
+</package>
