@@ -20,8 +20,8 @@ find_package(catkin REQUIRED COMPONENTS
 include_directories(include/${CMAKE_PROJECT_NAME})
 include_directories(${catkin_INCLUDE_DIRS})
 
-add_library(local_mapper SHARED src/local_map_builder.cpp)
-target_link_libraries(local_mapper ${OCTOMAP_LIBRARIES} ${catkin_LIBRARIES})
+add_library(local_map_builder SHARED src/local_map_builder.cpp)
+target_link_libraries(local_map_builder ${OCTOMAP_LIBRARIES} ${catkin_LIBRARIES})
 
-add_executable(local_mapper_node src/local_map_builder_node.cpp)
-target_link_libraries(local_mapper_node local_mapper)
+add_executable(local_map_builder_node src/local_map_builder_node.cpp)
+target_link_libraries(local_map_builder_node local_mapper)
