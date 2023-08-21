@@ -17,4 +17,5 @@ public:
 
 private:
     void set_forward_callback(const sensor_msgs::Range::ConstPtr & msg);
+    ros::Subscriber forward_listener;
 };
