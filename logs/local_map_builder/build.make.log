@@ -1,5 +1,0 @@
-[ 50%] Built target local_mapper
-[35m[1mScanning dependencies of target local_mapper_node[0m
-[ 75%] [32mBuilding CXX object CMakeFiles/local_mapper_node.dir/src/local_map_builder_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable local_mapper_node[0m
-[100%] Built target local_mapper_node
