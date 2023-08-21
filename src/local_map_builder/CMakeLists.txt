@@ -24,5 +24,5 @@ include_directories(${catkin_INCLUDE_DIRS})
 add_library(local_mapper SHARED src/local_map_builder.cpp)
 target_link_libraries(local_mapper ${OCTOMAP_LIBRARIES} ${catkin_LIBRARIES})
 
-add_executable(local_mapper src/local_map_builder_node.cpp)
-target_link_libraries(local_mapper local_mapper)
+add_executable(local_mapper_node src/local_map_builder_node.cpp)
+target_link_libraries(local_mapper_node local_mapper)
