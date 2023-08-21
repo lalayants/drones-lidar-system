@@ -1,0 +1,10 @@
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder_node.cpp:9:21:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[KLocalMapBuilder node_handler[m[K’
+    9 |     LocalMapBuilder([01;31m[Knode_handler[m[K);
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder_node.cpp:6:21:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kros::NodeHandle node_handler[m[K’
+    6 |     ros::NodeHandle [01;36m[Knode_handler[m[K;
+      |                     [01;36m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/local_mapper_node.dir/build.make:63: CMakeFiles/local_mapper_node.dir/src/local_map_builder_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1164: CMakeFiles/local_mapper_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

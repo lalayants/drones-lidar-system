@@ -1,0 +1,49 @@
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target _vl53l1x_generate_messages_check_deps_MeasurementData[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _vl53l1x_generate_messages_check_deps_MeasurementData
+[35m[1mScanning dependencies of target vl53l1x_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target vl53l1x_generate_messages_py[0m
+[35m[1mScanning dependencies of target vl53l1x_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target vl53l1x_generate_messages_eus[0m
+[35m[1mScanning dependencies of target vl53l1x_generate_messages_nodejs[0m
+[ 13%] [34m[1mGenerating Lisp code from vl53l1x/MeasurementData.msg[0m
+[ 13%] [34m[1mGenerating Python from MSG vl53l1x/MeasurementData[0m
+[ 13%] [34m[1mGenerating EusLisp manifest code for vl53l1x[0m
+[ 17%] [34m[1mGenerating Javascript code from vl53l1x/MeasurementData.msg[0m
+[ 21%] [34m[1mGenerating C++ code from vl53l1x/MeasurementData.msg[0m
+[ 26%] [34m[1mGenerating EusLisp code from vl53l1x/MeasurementData.msg[0m
+[ 26%] Built target vl53l1x_generate_messages_nodejs
+[ 26%] Built target vl53l1x_generate_messages_lisp
+[ 26%] Built target vl53l1x_generate_messages_cpp
+[35m[1mScanning dependencies of target vl53l1x_node[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/vl53l1x_node.dir/src/vl53l1x.cpp.o[0m
+[ 34%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api_preset_modes.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api_strings.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_error_strings.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_wait.c.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/vl53l1x_node.dir/src/i2c.cpp.o[0m
+[ 65%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_core.c.o[0m
+[ 65%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_silicon_core.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_core_support.c.o[0m
+[ 69%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api.c.o[0m
+[ 73%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api_core.c.o[0m
+[ 82%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api_debug.c.o[0m
+[ 82%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_api_calibration.c.o[0m
+[ 86%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/core/vl53l1_register_funcs.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/vl53l1x_node.dir/lib/platform/vl53l1_platform.c.o[0m
+[ 95%] [34m[1mGenerating Python msg __init__.py for vl53l1x[0m
+[ 95%] Built target vl53l1x_generate_messages_eus
+[ 95%] Built target vl53l1x_generate_messages_py
+[35m[1mScanning dependencies of target vl53l1x_generate_messages[0m
+[ 95%] Built target vl53l1x_generate_messages
+[100%] [32m[1mLinking CXX executable /workspace/ros_ws/devel/.private/vl53l1x/lib/vl53l1x/vl53l1x_node[0m
+[100%] Built target vl53l1x_node

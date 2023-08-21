@@ -14,4 +14,7 @@ class LocalMapBuilder {
 public:
     LocalMapBuilder(ros::NodeHandle & _node_handler);
 	~LocalMapBuilder();
-}
+
+private:
+    void set_forward_callback(const sensor_msgs::Range::ConstPtr & msg);
+};

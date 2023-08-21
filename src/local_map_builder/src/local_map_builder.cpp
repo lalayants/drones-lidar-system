@@ -2,12 +2,12 @@
 
 LocalMapBuilder::LocalMapBuilder(ros::NodeHandle & _node_handler){
     ROS_INFO("LocalMapBuilder creation started");
-    ros::Subscriber map_listener = node_handler.subscribe("/vl53l1x/range", 10, &LocalMapBuilder::set_forward_callback, this);
+    ros::Subscriber map_listener = _node_handler.subscribe("/vl53l1x/range", 10, &LocalMapBuilder::set_forward_callback, this);
 }
 
 LocalMapBuilder::~LocalMapBuilder()
 { }
 
-void LocalMapBuilder::set_forward_callback(const geometry_msgs::Point::ConstPtr & msg){
+void LocalMapBuilder::set_forward_callback(const sensor_msgs::Range::ConstPtr & msg){
     ROS_INFO("Lidar: %f\n", msg->range);
 }

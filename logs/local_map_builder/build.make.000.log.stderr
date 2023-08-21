@@ -1,0 +1,28 @@
+In file included from [01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:1[m[K:
+[01m[K/workspace/ros_ws/src/local_map_builder/src/../include/local_map_builder.h:13:1:[m[K [01;31m[Kerror: [m[Knew types may not be defined in a return type
+   13 | [01;31m[Kclass[m[K LocalMapBuilder {
+      | [01;31m[K^~~~~[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/../include/local_map_builder.h:13:1:[m[K [01;36m[Knote: [m[K(perhaps a semicolon is missing after the definition of ‘[01m[KLocalMapBuilder[m[K’)
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:3:65:[m[K [01;31m[Kerror: [m[Kreturn type specification for constructor invalid
+    3 | LocalMapBuilder::LocalMapBuilder(ros::NodeHandle & _node_handler[01;31m[K)[m[K{
+      |                                                                 [01;31m[K^[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:[m[K In constructor ‘[01m[KLocalMapBuilder::LocalMapBuilder(ros::NodeHandle&)[m[K’:
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:5:36:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_handler[m[K’ was not declared in this scope; did you mean ‘[01m[K_node_handler[m[K’?
+    5 |     ros::Subscriber map_listener = [01;31m[Knode_handler[m[K.subscribe("/vl53l1x/range", 10, &LocalMapBuilder::set_forward_callback, this);
+      |                                    [01;31m[K^~~~~~~~~~~~[m[K
+      |                                    [32m[K_node_handler[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:5:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_forward_callback[m[K’ is not a member of ‘[01m[KLocalMapBuilder[m[K’
+    5 |     ros::Subscriber map_listener = node_handler.subscribe("/vl53l1x/range", 10, &LocalMapBuilder::[01;31m[Kset_forward_callback[m[K, this);
+      |                                                                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:[m[K At global scope:
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:11:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LocalMapBuilder::set_forward_callback(const ConstPtr&)[m[K’
+   11 | void [01;31m[KLocalMapBuilder[m[K::set_forward_callback(const sensor_msgs::Range::ConstPtr & msg){
+      |      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:11:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LocalMapBuilder::set_forward_callback(const ConstPtr&)[m[K’
+In file included from [01m[K/workspace/ros_ws/src/local_map_builder/src/local_map_builder.cpp:1[m[K:
+[01m[K/workspace/ros_ws/src/local_map_builder/src/../include/local_map_builder.h:13:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LocalMapBuilder[m[K’ defined here
+   13 | class [01;36m[KLocalMapBuilder[m[K {
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/local_mapper.dir/build.make:63: CMakeFiles/local_mapper.dir/src/local_map_builder.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1272: CMakeFiles/local_mapper.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

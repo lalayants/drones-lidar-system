@@ -6,7 +6,7 @@ int main(int _argc, char **_argv){
     ros::NodeHandle node_handler;
     ros::Rate rate(10);
     ROS_INFO("Creating\n");
-    LocalMapBuilder(node_handler);
+    LocalMapBuilder builder(node_handler);
     while(ros::ok){
         ros::spinOnce();
         rate.sleep();
