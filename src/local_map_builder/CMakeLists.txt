@@ -21,12 +21,8 @@ find_package(catkin REQUIRED COMPONENTS
 include_directories(include/${CMAKE_PROJECT_NAME})
 include_directories(${catkin_INCLUDE_DIRS})
 
-add_library(global_planner_3d_ros_wrapper SHARED src/global_planner_wrapper.cpp)
-target_link_libraries(global_planner_3d_ros_wrapper ${3d_navigation_LIBRARIES} ${OCTOMAP_LIBRARIES} ${catkin_LIBRARIES} fcl)
+add_library(local_mapper SHARED src/local_map_builder.cpp)
+target_link_libraries(local_mapper ${OCTOMAP_LIBRARIES} ${catkin_LIBRARIES})
 
-add_executable(global_planner_node src/global_planner_node.cpp)
-target_link_libraries(global_planner_node global_planner_3d_ros_wrapper)
-
-## Main script for example and tests
-# add_executable(main src/main.cpp)
-# target_link_libraries(main ${catkin_LIBRARIES} ${3d_navigation_LIBRARIES} fcl)
+add_executable(local_mapper src/local_map_builder_node.cpp)
+target_link_libraries(local_mapper local_mapper)
