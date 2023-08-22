@@ -38,8 +38,8 @@ class NodeExample():
         #         rospy.sleep(1/rate)
         #     else:
         #         rospy.sleep(1.0)
-    def forward_callback(self):
-        print('FUck')
+    def forward_callback(self, msg):
+        print('FUck', msg.range)
 
 
 # Main function.
