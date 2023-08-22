@@ -1,3 +1,5 @@
 drone_pose_topic: "/goal_pose_sub_topic_name"
 obstacle_map_topic: "/global_planner/path"
+lidar_1_topic: ""
+
 resolution: 0.05
