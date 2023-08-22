@@ -17,6 +17,15 @@ find_package(catkin REQUIRED COMPONENTS
   octomap_msgs
   tf
 )
+add_message_files(
+  FILES
+  costmap_3d.msg
+)
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+)
 
 include_directories(include/${CMAKE_PROJECT_NAME})
 include_directories(${catkin_INCLUDE_DIRS})

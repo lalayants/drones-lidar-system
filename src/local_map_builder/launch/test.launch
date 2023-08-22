@@ -1,5 +1,5 @@
 <launch>
   <!-- <arg name="config_path" default="$(find 3d_navigation_ros_wrapper)/config/params.yaml"/> -->
   <!-- <rosparam command="load" file="$(arg config_path)" /> -->
-  <node pkg="local_map_builder" type="local_map_builder_node" name="local_map_builder" output="screen"/>
+  <node pkg="local_map_builder" type="local_map_builder_node.py" name="local_map_builder" output="screen"/>
 </launch> 
