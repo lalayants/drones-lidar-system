@@ -59,5 +59,6 @@ if __name__ == '__main__':
         lmp = LocalMapBuilder()
         while not rospy.is_shutdown():
             rospy.spin()
+            lmp.publish_map()
             rate.sleep()
     except rospy.ROSInterruptException: pass
