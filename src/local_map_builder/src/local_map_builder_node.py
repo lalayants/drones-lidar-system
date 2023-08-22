@@ -20,7 +20,7 @@ class NodeExample():
         # rospy.loginfo('rate = %d', rate)
         # rospy.loginfo('topic = %s', topic)
         
-        self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d)
+        self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d, queue_size=2)
         self._lidar_listener_forward = rospy.Subscriber('/vl53l1x/range', costmap_3d, self.forward_callback, self)
         
         
