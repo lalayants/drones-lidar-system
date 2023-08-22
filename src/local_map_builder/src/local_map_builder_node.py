@@ -46,6 +46,7 @@ class NodeExample():
 if __name__ == '__main__':
     # Initialize the node and name it.
     rospy.init_node('local_map_builder')
+    rospy.rate(1)
     # Go to class functions that do all the heavy lifting. Do error checking.
     try:
         ne = NodeExample()
