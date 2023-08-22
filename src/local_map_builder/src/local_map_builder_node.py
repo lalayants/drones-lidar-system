@@ -14,7 +14,10 @@ from sensor_msgs.msg import Range
 # Node example class.
 class LocalMapBuilder():
     def __init__(self):
-        self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d, queue_size=2)
+        obstacle_map_topic = rospy.get_param("/obstacle_map_topic")
+        drone_pose_topic = rospy.get_param("/map_topic")
+        self._resolution = rospy.get_param("/resolution")
+        self._local_map_publisher = rospy.Publisher(obstacle_map_topic, costmap_3d, queue_size=2)
         self._lidar_listener_forward = rospy.Subscriber('vl53l1x/range', Range, self.forward_callback)
         
     def forward_callback(self, msg):

@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="vl53l1x" type="vl53l1x_node_forward" name="vl53l1x_forward" clear_params="true">
+    <node pkg="vl53l1x" type="vl53l1x_node" name="vl53l1x_forward" clear_params="true">
         <param name="i2c_address" value="0x26"/>
         <param name="ignore_range_status" value="false"/>
         <param name="timing_budget" value="0.14"/>
@@ -7,7 +7,7 @@
         <param name="min_range" value="0.0"/>
         <param name="max_range" value="4.0"/>
     </node>
-    <node pkg="vl53l1x" type="vl53l1x_node_left" name="vl53l1x_left" clear_params="true">
+    <node pkg="vl53l1x" type="vl53l1x_node" name="vl53l1x_left" clear_params="true">
         <param name="i2c_address" value="0x27"/>
         <param name="ignore_range_status" value="false"/>
         <param name="timing_budget" value="0.14"/>
@@ -15,7 +15,7 @@
         <param name="min_range" value="0.0"/>
         <param name="max_range" value="4.0"/>
     </node>
-    <node pkg="vl53l1x" type="vl53l1x_node_backward" name="vl53l1x_backward" clear_params="true">
+    <node pkg="vl53l1x" type="vl53l1x_node" name="vl53l1x_backward" clear_params="true">
         <param name="i2c_address" value="0x28"/>
         <param name="ignore_range_status" value="false"/>
         <param name="timing_budget" value="0.14"/>
@@ -23,7 +23,7 @@
         <param name="min_range" value="0.0"/>
         <param name="max_range" value="4.0"/>
     </node>
-    <node pkg="vl53l1x" type="vl53l1x_node_right" name="vl53l1x_right" clear_params="true">
+    <node pkg="vl53l1x" type="vl53l1x_node" name="vl53l1x_right" clear_params="true">
         <param name="i2c_address" value="0x29"/>
         <param name="ignore_range_status" value="false"/>
         <param name="timing_budget" value="0.14"/>
