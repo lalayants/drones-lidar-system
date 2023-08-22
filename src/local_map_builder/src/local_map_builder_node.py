@@ -14,7 +14,6 @@ from sensor_msgs.msg import Range
 # Node example class.
 class LocalMapBuilder():
     def __init__(self):
-        self.t = time.time()
         self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d, queue_size=2)
         self._lidar_listener_forward = rospy.Subscriber('vl53l1x/range', Range, self.forward_callback)
         
@@ -22,8 +21,7 @@ class LocalMapBuilder():
         print('Forward: ', msg.range)
     
     def publish_map(self):
-        print('Publish', time.time() - self.t)
-        self.t = time.time()
+        print('Publish')
 
 
 if __name__ == '__main__':
@@ -32,8 +30,6 @@ if __name__ == '__main__':
     try:
         lmp = LocalMapBuilder()
         while not rospy.is_shutdown():
-            rospy.spin()
-            print("spin")
             lmp.publish_map()
             rate.sleep()
     except rospy.ROSInterruptException: pass
