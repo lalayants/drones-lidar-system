@@ -39,7 +39,7 @@ class NodeExample():
         #     else:
         #         rospy.sleep(1.0)
     def forward_callback(self, msg):
-        print('FUck', msg.range)
+        print('Forward: ', msg.range)
 
 
 # Main function.
