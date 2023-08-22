@@ -8,6 +8,7 @@ import os
 
 print(os.getcwd())
 from local_map_builder.msg import costmap_3d
+from sensor_msgs.msg import Range
 
 # Node example class.
 class NodeExample():
@@ -21,7 +22,7 @@ class NodeExample():
         # rospy.loginfo('topic = %s', topic)
         
         self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d, queue_size=2)
-        self._lidar_listener_forward = rospy.Subscriber('vl53l1x/range', costmap_3d, self.forward_callback)
+        self._lidar_listener_forward = rospy.Subscriber('vl53l1x/range', Range, self.forward_callback)
         
         
         # Main while loop.
