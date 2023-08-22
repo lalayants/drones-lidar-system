@@ -21,7 +21,7 @@ class NodeExample():
         # rospy.loginfo('topic = %s', topic)
         
         self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d)
-        self._lidar_listener_forward = rospy.Subscriber('/obstacle_map', costmap_3d, self.forward_callback, self)
+        self._lidar_listener_forward = rospy.Subscriber('/vl53l1x/range', costmap_3d, self.forward_callback, self)
         
         
         # Main while loop.
