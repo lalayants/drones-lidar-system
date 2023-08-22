@@ -3,6 +3,7 @@
 import rospy
 import numpy
 import sys
+import time
 
 import os
 
@@ -11,9 +12,10 @@ from local_map_builder.msg import costmap_3d
 from sensor_msgs.msg import Range
 
 # Node example class.
-class NodeExample():
+class LocalMapBuilder():
     # Must have __init__(self) function for a class, similar to a C++ class constructor.
     def __init__(self):
+        self.t = time.time()
         # Get the ~private namespace parameters from command line or launch file.
         # init_message = rospy.get_param('~message', 'hello')
         # rate = float(rospy.get_param('~rate', '1.0'))
@@ -40,6 +42,11 @@ class NodeExample():
         #         rospy.sleep(1.0)
     def forward_callback(self, msg):
         print('Forward: ', msg.range)
+    
+    def publish_map(self):
+        
+        print('Publish', time.time() - self.t)
+        self.t = time.time()
 
 
 # Main function.
@@ -49,7 +56,7 @@ if __name__ == '__main__':
     rate = rospy.Rate(1)
     # Go to class functions that do all the heavy lifting. Do error checking.
     try:
-        ne = NodeExample()
+        lmp = LocalMapBuilder()
         while not rospy.is_shutdown():
             rospy.spin()
             rate.sleep()
