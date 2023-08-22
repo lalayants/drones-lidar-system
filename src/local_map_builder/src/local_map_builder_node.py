@@ -20,21 +20,25 @@ class NodeExample():
         # rospy.loginfo('rate = %d', rate)
         # rospy.loginfo('topic = %s', topic)
         
-        pub = rospy.Publisher('/obstacle_map', costmap_3d)
+        self._local_map_publisher = rospy.Publisher('/obstacle_map', costmap_3d)
+        self._lidar_listener_forward = rospy.Subscriber('/obstacle_map', costmap_3d, self.forward_callback, self)
+        
         
         # Main while loop.
-        while not rospy.is_shutdown():
-            # Fill in custom message variables with values from dynamic reconfigure server.
-            msg.message = self.message
-            msg.a = self.a
-            msg.b = self.b
-            # Publish our custom message.
-            pub.publish(msg)
-            # Sleep for a while before publishing new messages. Division is so rate != period.
-            if rate:
-                rospy.sleep(1/rate)
-            else:
-                rospy.sleep(1.0)
+        # while not rospy.is_shutdown():
+        #     # Fill in custom message variables with values from dynamic reconfigure server.
+        #     msg.message = self.message
+        #     msg.a = self.a
+        #     msg.b = self.b
+        #     # Publish our custom message.
+        #     pub.publish(msg)
+        #     # Sleep for a while before publishing new messages. Division is so rate != period.
+        #     if rate:
+        #         rospy.sleep(1/rate)
+        #     else:
+        #         rospy.sleep(1.0)
+    def forward_callback(self):
+        print('FUck')
 
 
 # Main function.
@@ -44,4 +48,6 @@ if __name__ == '__main__':
     # Go to class functions that do all the heavy lifting. Do error checking.
     try:
         ne = NodeExample()
+        while not rospy.is_shutdown():
+            rospy.spin()
     except rospy.ROSInterruptException: pass
