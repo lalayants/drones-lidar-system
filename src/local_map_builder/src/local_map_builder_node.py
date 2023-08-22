@@ -44,7 +44,6 @@ class LocalMapBuilder():
         print('Forward: ', msg.range)
     
     def publish_map(self):
-        
         print('Publish', time.time() - self.t)
         self.t = time.time()
 
