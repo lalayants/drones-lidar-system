@@ -27,6 +27,11 @@ generate_messages(
   geometry_msgs
 )
 
+catkin_package(
+  LIBRARIES local_map_builder
+)
+
+
 include_directories(include/${CMAKE_PROJECT_NAME})
 include_directories(${catkin_INCLUDE_DIRS})
 
